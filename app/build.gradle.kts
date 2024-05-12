@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
 }
 
 android {
@@ -17,6 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -32,6 +34,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    // Enable data binding
+    buildFeatures {
+        dataBinding=true
     }
 }
 
